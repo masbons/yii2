@@ -106,12 +106,13 @@ class SiteController extends Controller
     public function actionContact()
     {
         $mediaSosial = ContactForm::mediaSosial();
+        // mirip seperti dd di laravel
+        // echo '<pre>';
+        // print_r($mediaSosial);
+        // exit;
         $model = new ContactForm();
         if ($model->load(Yii::$app->request->post())) {
-            echo '<pre>';
-            print_r($model);
-            exit;
-              $model->contact(Yii::$app->params['adminEmail'])
+            $model->contact(Yii::$app->params['adminEmail']);
             Yii::$app->session->setFlash('contactFormSubmitted');
 
             return $this->refresh();
@@ -131,10 +132,11 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
     public function actionHelloWorld()
     {
-        $hello = "Selamat Datang Di Channel BONSMEDIA";
-        return $this->render('hello-world',[
+        $hello = "Selamat Datang";
+        return $this->render('hello-world', [
             'hello' => $hello
         ]);
     }

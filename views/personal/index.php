@@ -30,18 +30,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id_personal',
             'nama_lengkap',
-            'nama_panggilan',
             'jenis_kelamin',
             'tempat_lahir',
-            //'tanggal_lahir',
-            //'status',
-            //'agama',
-            //'pendidikan',
-            //'alamat',
-            //'no_ktp',
-            //'no_hp',
+            'tanggal_lahir', 
+            'alamat',
+            'no_ktp',
+            'no_hp',
             //'email:email',
             [
                 'class' => ActionColumn::className(),

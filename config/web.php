@@ -10,8 +10,16 @@ $config = [
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
+
     ],
     'components' => [
+       'view' => [
+           'theme' => [
+               'pathMap' => [
+                '@app/views' => '@vendor/hail812/yii2-adminlte3/src/views'
+            ],
+        ],
+    ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'yii2',
@@ -41,6 +49,7 @@ $config = [
                 ],
             ],
         ],
+
         'db' => $db,
         /*
         'urlManager' => [
@@ -69,6 +78,7 @@ if (YII_ENV_DEV) {
         // uncomment the following to add your IP if you are not connecting from localhost.
         //'allowedIPs' => ['127.0.0.1', '::1'],
     ];
+    
 }
 
 return $config;
